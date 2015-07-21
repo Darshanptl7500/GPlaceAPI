@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B56745E1B5E6E13003693EC /* NearbyPlaceSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */; };
+		7B5674631B5E786C003693EC /* TextSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5674621B5E786C003693EC /* TextSearchController.m */; };
 		7BA76E401B5E178500CB8B3A /* GPAddressComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E0F1B5E178500CB8B3A /* GPAddressComponents.m */; };
 		7BA76E411B5E178500CB8B3A /* GPAutoCompleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E111B5E178500CB8B3A /* GPAutoCompleteRequest.m */; };
 		7BA76E421B5E178500CB8B3A /* GPAutoCompleteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E131B5E178500CB8B3A /* GPAutoCompleteResponse.m */; };
@@ -57,6 +58,8 @@
 		5D85978DEB8A7A4E3DB8CACB /* Pods-GPlaceAPIExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPlaceAPIExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPlaceAPIExample/Pods-GPlaceAPIExample.release.xcconfig"; sourceTree = "<group>"; };
 		7B56745C1B5E6E13003693EC /* NearbyPlaceSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPlaceSearchController.h; sourceTree = "<group>"; };
 		7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPlaceSearchController.m; sourceTree = "<group>"; };
+		7B5674611B5E786C003693EC /* TextSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSearchController.h; sourceTree = "<group>"; };
+		7B5674621B5E786C003693EC /* TextSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextSearchController.m; sourceTree = "<group>"; };
 		7BA76E0E1B5E178500CB8B3A /* GPAddressComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAddressComponents.h; sourceTree = "<group>"; };
 		7BA76E0F1B5E178500CB8B3A /* GPAddressComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAddressComponents.m; sourceTree = "<group>"; };
 		7BA76E101B5E178500CB8B3A /* GPAutoCompleteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAutoCompleteRequest.h; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		7B56745F1B5E6E19003693EC /* PlaceSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7B5674641B5E7871003693EC /* TextSearch */,
 				7B5674601B5E6E22003693EC /* Nearby */,
 			);
 			name = PlaceSearch;
@@ -157,6 +161,15 @@
 				7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */,
 			);
 			name = Nearby;
+			sourceTree = "<group>";
+		};
+		7B5674641B5E7871003693EC /* TextSearch */ = {
+			isa = PBXGroup;
+			children = (
+				7B5674611B5E786C003693EC /* TextSearchController.h */,
+				7B5674621B5E786C003693EC /* TextSearchController.m */,
+			);
+			name = TextSearch;
 			sourceTree = "<group>";
 		};
 		7BA76E0D1B5E178500CB8B3A /* GPlaceAPI */ = {
@@ -502,6 +515,7 @@
 				7D7AC1CF1B5D77EE00AAAE64 /* main.m in Sources */,
 				7BA76E461B5E178500CB8B3A /* GPOpeningHours.m in Sources */,
 				7BA76E4E1B5E178500CB8B3A /* GPPlaceSearchResponse.m in Sources */,
+				7B5674631B5E786C003693EC /* TextSearchController.m in Sources */,
 				7BA76E481B5E178500CB8B3A /* GPPeriodClose.m in Sources */,
 				7BA76E4B1B5E178500CB8B3A /* GPPlaceDetailsRequest.m in Sources */,
 				7BA76E471B5E178500CB8B3A /* GPOpeningHoursPeriods.m in Sources */,

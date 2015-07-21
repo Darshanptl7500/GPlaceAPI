@@ -8,6 +8,7 @@
 
 #import "SelectPlaceService.h"
 #import "NearbyPlaceSearchController.h"
+#import "TextSearchController.h"
 
 @interface SelectPlaceService ()
 
@@ -92,7 +93,18 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NearbyPlaceSearchController *objNearBy =[self.storyboard instantiateViewControllerWithIdentifier:@"NearbyPlaceSearchController"];
-    [self.navigationController pushViewController:objNearBy animated:YES];
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+            NearbyPlaceSearchController *objNearBy =[self.storyboard instantiateViewControllerWithIdentifier:@"NearbyPlaceSearchController"];
+            [self.navigationController pushViewController:objNearBy animated:YES];
+        }else if(indexPath.row == 1)
+        {
+            TextSearchController *objTextBy =[self.storyboard instantiateViewControllerWithIdentifier:@"TextSearchController"];
+            [self.navigationController pushViewController:objTextBy animated:YES];
+            
+        }
+    }
+ 
 }
 @end

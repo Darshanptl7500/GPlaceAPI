@@ -100,5 +100,44 @@
             </objects>
             <point key="canvasLocation" x="1554" y="-390"/>
         </scene>
+        <!--Text Search Controller-->
+        <scene sceneID="Bel-CQ-DJB">
+            <objects>
+                <viewController storyboardIdentifier="TextSearchController" automaticallyAdjustsScrollViewInsets="NO" id="b8t-ET-BFD" customClass="TextSearchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mae-jy-ONw"/>
+                        <viewControllerLayoutGuide type="bottom" id="M9o-a4-MTs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hF4-U1-rHv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0r6-qf-nOs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="b8t-ET-BFD" id="5o1-Sm-zO5"/>
+                                    <outlet property="delegate" destination="b8t-ET-BFD" id="8Ai-MG-O6r"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0r6-qf-nOs" secondAttribute="bottom" id="59T-43-JA5"/>
+                            <constraint firstItem="0r6-qf-nOs" firstAttribute="leading" secondItem="hF4-U1-rHv" secondAttribute="leading" id="BIu-yG-IT8"/>
+                            <constraint firstItem="0r6-qf-nOs" firstAttribute="top" secondItem="Mae-jy-ONw" secondAttribute="bottom" id="Kff-4w-c7b"/>
+                            <constraint firstAttribute="trailing" secondItem="0r6-qf-nOs" secondAttribute="trailing" id="rRv-8P-W9G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W8h-dx-LDg"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tblTextSearch" destination="0r6-qf-nOs" id="xeC-CC-NYt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN1-BW-xbV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="309"/>
+        </scene>
     </scenes>
 </document>
