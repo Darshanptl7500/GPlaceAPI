@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GPHeader.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[GPlaceAPISetup sharedInstance] setApi_Key:@"AIzaSyB_1GkHCrJsiErWwmF8AVcp4VGQaDxrOh4"];
     // Override point for customization after application launch.
     return YES;
 }

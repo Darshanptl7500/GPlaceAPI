@@ -33,6 +33,7 @@
 		7BA76E551B5E178500CB8B3A /* GPTerms.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3B1B5E178500CB8B3A /* GPTerms.m */; };
 		7BA76E561B5E178500CB8B3A /* GPTextSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3D1B5E178500CB8B3A /* GPTextSearchRequest.m */; };
 		7BA76E571B5E178500CB8B3A /* GPTextSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3F1B5E178500CB8B3A /* GPTextSearchResponse.m */; };
+		7D53B7EB1B5EC16000A6BE09 /* GPlaceAPISetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D53B7EA1B5EC16000A6BE09 /* GPlaceAPISetup.m */; };
 		7D7AC1CF1B5D77EE00AAAE64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1CE1B5D77EE00AAAE64 /* main.m */; };
 		7D7AC1D21B5D77EE00AAAE64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */; };
 		7D7AC1D51B5D77EE00AAAE64 /* SelectPlaceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D41B5D77EE00AAAE64 /* SelectPlaceService.m */; };
@@ -110,6 +111,8 @@
 		7BA76E3D1B5E178500CB8B3A /* GPTextSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTextSearchRequest.m; sourceTree = "<group>"; };
 		7BA76E3E1B5E178500CB8B3A /* GPTextSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTextSearchResponse.h; sourceTree = "<group>"; };
 		7BA76E3F1B5E178500CB8B3A /* GPTextSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTextSearchResponse.m; sourceTree = "<group>"; };
+		7D53B7E91B5EC16000A6BE09 /* GPlaceAPISetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPlaceAPISetup.h; sourceTree = "<group>"; };
+		7D53B7EA1B5EC16000A6BE09 /* GPlaceAPISetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPlaceAPISetup.m; sourceTree = "<group>"; };
 		7D7AC1C91B5D77EE00AAAE64 /* GPlaceAPIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPlaceAPIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7AC1CD1B5D77EE00AAAE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7AC1CE1B5D77EE00AAAE64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 		7BA76E5D1B5E180900CB8B3A /* GPlaceAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				7D53B7E91B5EC16000A6BE09 /* GPlaceAPISetup.h */,
+				7D53B7EA1B5EC16000A6BE09 /* GPlaceAPISetup.m */,
 				7BA76E181B5E178500CB8B3A /* GPlacesAPIClient.h */,
 				7BA76E191B5E178500CB8B3A /* GPlacesAPIClient.m */,
 			);
@@ -517,6 +522,7 @@
 				7BA76E4E1B5E178500CB8B3A /* GPPlaceSearchResponse.m in Sources */,
 				7B5674631B5E786C003693EC /* TextSearchController.m in Sources */,
 				7BA76E481B5E178500CB8B3A /* GPPeriodClose.m in Sources */,
+				7D53B7EB1B5EC16000A6BE09 /* GPlaceAPISetup.m in Sources */,
 				7BA76E4B1B5E178500CB8B3A /* GPPlaceDetailsRequest.m in Sources */,
 				7BA76E471B5E178500CB8B3A /* GPOpeningHoursPeriods.m in Sources */,
 				7BA76E531B5E178500CB8B3A /* GPReviews.m in Sources */,

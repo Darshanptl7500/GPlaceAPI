@@ -31,7 +31,6 @@
 #define APIManager_GPConstant_h
 
 #define kAPI_PLACES_URL @"https://maps.googleapis.com/maps/api/place/"
-#define kGOOGLE_PLACE_API_KEY @"AIzaSyB_1GkHCrJsiErWwmF8AVcp4VGQaDxrOh4"
 
 typedef NS_ENUM(NSInteger, GPRankBy) {
     GPRankByProminence = 0,

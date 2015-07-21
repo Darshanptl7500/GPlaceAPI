@@ -63,9 +63,9 @@
 {
     NSMutableDictionary *params =[[NSMutableDictionary alloc] init];
     
-    NSAssert(![kGOOGLE_PLACE_API_KEY isEqualToString:@""], @"Please Enter API Key");
+    NSAssert(![[GPlaceAPISetup sharedInstance].Api_Key isEqualToString:@""], @"Please Enter API Key");
     
-    params[@"key"] = kGOOGLE_PLACE_API_KEY;
+    params[@"key"] = [GPlaceAPISetup sharedInstance].Api_Key;
     
     if (_placeid) {
         
