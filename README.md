@@ -41,9 +41,9 @@ In order to communicate with a Google Places API, you must first generate your o
 
 You must provide API key to a `GPlaceAPI` before making any request using it.
 
-//Open "GPConstant.h" and set your API_KEY
+//Open "AppDelegate.h" and set your API_KEY
 
-`#define kGOOGLE_PLACE_API_KEY @"API_KEY"`
+`[[GPlaceAPISetup sharedInstance] setApi_Key:@"SET_API_KEY"];`
 
 #### 3. Making a request & get Resonse
 ```
