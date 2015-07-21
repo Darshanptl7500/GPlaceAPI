@@ -7,19 +7,19 @@ Its Main purpose it to use Google Places API requests with ease in a less lines 
 This includes following:
 
  - [Place Search][2]
-     - Nearby Search (search places withing a specified area)
+     - Nearby Search (search places in a specified area)
      - Text Search (search places based on a search string)
  - [Place Details][3] (get more comprehensive information about a place)
  - [Place Photos][9] (Get more info about place photos)
  - [Place Autocomplete][10]  (Get place predictions based on the search text)
  - [Query Autocomplete][11](Get on-the-fly geographic query predictions)
 
-##Instalation
+##How To Use
 
 
 ### Manual (or using git submodule)
  1. Implement [AFNetworking 2.0][4]
-    - GPlaceAPI uses AFNetworking 2.0 so, you need to add AFNetworking[12] in your project 
+    - GPlaceAPI uses AFNetworking 2.0 so, you need to add AFNetworking[4] in your project 
  2. Download source files from this repository
  3. Add all files from *GPlaceAPI* folder to your project's target
 
@@ -65,21 +65,21 @@ Please check [Google Places API documentation][7] for request and resonse. you c
 
 ##Contact
 
-GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [drop us an email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library.
+GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [drop us an email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library and anything related to this library.
 
 ##Contributing and notes
 
- - If you like the library, please consider giving it a Github star to let us know it.
+ - If you like this library, please consider giving it a Github star.
 
 Pull requests are very welcome expecting you follow few rules:
 
  - Document your changes in a code comments and Git commit message
- - Make sure your changes didn't cause any trouble using included example project, unit tests and if appropriate, implement unit tests and example code for your newly added functionality
+ - Please do make sure your changes don't trouble with any existing code
 
 ##Version history
 
 #### 1.0
- - First official public release
+ - First release
 
 ##License
 The MIT License (MIT)
