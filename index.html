@@ -88,9 +88,9 @@
 
 <p>You must provide API key to a <code>GPlaceAPI</code> before making any request using it.</p>
 
-<p>//Open "GPConstant.h" and set your API_KEY</p>
+<p>//Open "AppDelegate.h" and set your API_KEY</p>
 
-<p><code>#define kGOOGLE_PLACE_API_KEY @"API_KEY"</code></p>
+<p><code>[[GPlaceAPISetup sharedInstance] setApi_Key:@"SET_API_KEY"];</code></p>
 
 <h4>
 <a id="3-making-a-request--get-resonse" class="anchor" href="#3-making-a-request--get-resonse" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Making a request &amp; get Resonse</h4>
