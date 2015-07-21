@@ -120,11 +120,11 @@
         
         if (_rankby == GPRankByProminence) {
             
-            params[@"rankby"] = @"prominence";
+            params[@"rankBy"] = @"prominence";
             
         }else if(_rankby == GPRankByDistance)
         {
-            params[@"rankby"] = @"distance";
+            params[@"rankBy"] = @"distance";
         }
         
     }

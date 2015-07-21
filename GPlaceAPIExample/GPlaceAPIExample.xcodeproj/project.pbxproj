@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B56745E1B5E6E13003693EC /* NearbyPlaceSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */; };
 		7BA76E401B5E178500CB8B3A /* GPAddressComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E0F1B5E178500CB8B3A /* GPAddressComponents.m */; };
 		7BA76E411B5E178500CB8B3A /* GPAutoCompleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E111B5E178500CB8B3A /* GPAutoCompleteRequest.m */; };
 		7BA76E421B5E178500CB8B3A /* GPAutoCompleteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E131B5E178500CB8B3A /* GPAutoCompleteResponse.m */; };
@@ -33,7 +34,7 @@
 		7BA76E571B5E178500CB8B3A /* GPTextSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3F1B5E178500CB8B3A /* GPTextSearchResponse.m */; };
 		7D7AC1CF1B5D77EE00AAAE64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1CE1B5D77EE00AAAE64 /* main.m */; };
 		7D7AC1D21B5D77EE00AAAE64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */; };
-		7D7AC1D51B5D77EE00AAAE64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D41B5D77EE00AAAE64 /* ViewController.m */; };
+		7D7AC1D51B5D77EE00AAAE64 /* SelectPlaceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D41B5D77EE00AAAE64 /* SelectPlaceService.m */; };
 		7D7AC1D81B5D77EE00AAAE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D61B5D77EE00AAAE64 /* Main.storyboard */; };
 		7D7AC1DA1B5D77EE00AAAE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D91B5D77EE00AAAE64 /* Images.xcassets */; };
 		7D7AC1DD1B5D77EE00AAAE64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7AC1DB1B5D77EE00AAAE64 /* LaunchScreen.xib */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		509B48261834732947AECC1B /* libPods-GPlaceAPIExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GPlaceAPIExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D85978DEB8A7A4E3DB8CACB /* Pods-GPlaceAPIExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPlaceAPIExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPlaceAPIExample/Pods-GPlaceAPIExample.release.xcconfig"; sourceTree = "<group>"; };
+		7B56745C1B5E6E13003693EC /* NearbyPlaceSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPlaceSearchController.h; sourceTree = "<group>"; };
+		7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPlaceSearchController.m; sourceTree = "<group>"; };
 		7BA76E0E1B5E178500CB8B3A /* GPAddressComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAddressComponents.h; sourceTree = "<group>"; };
 		7BA76E0F1B5E178500CB8B3A /* GPAddressComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAddressComponents.m; sourceTree = "<group>"; };
 		7BA76E101B5E178500CB8B3A /* GPAutoCompleteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAutoCompleteRequest.h; sourceTree = "<group>"; };
@@ -109,8 +112,8 @@
 		7D7AC1CE1B5D77EE00AAAE64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D7AC1D01B5D77EE00AAAE64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7D7AC1D31B5D77EE00AAAE64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7D7AC1D41B5D77EE00AAAE64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7D7AC1D31B5D77EE00AAAE64 /* SelectPlaceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectPlaceService.h; sourceTree = "<group>"; };
+		7D7AC1D41B5D77EE00AAAE64 /* SelectPlaceService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectPlaceService.m; sourceTree = "<group>"; };
 		7D7AC1D71B5D77EE00AAAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D7AC1D91B5D77EE00AAAE64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D7AC1DC1B5D77EE00AAAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -139,6 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B56745F1B5E6E19003693EC /* PlaceSearch */ = {
+			isa = PBXGroup;
+			children = (
+				7B5674601B5E6E22003693EC /* Nearby */,
+			);
+			name = PlaceSearch;
+			sourceTree = "<group>";
+		};
+		7B5674601B5E6E22003693EC /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				7B56745C1B5E6E13003693EC /* NearbyPlaceSearchController.h */,
+				7B56745D1B5E6E13003693EC /* NearbyPlaceSearchController.m */,
+			);
+			name = Nearby;
+			sourceTree = "<group>";
+		};
 		7BA76E0D1B5E178500CB8B3A /* GPlaceAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,10 +297,11 @@
 		7D7AC1CB1B5D77EE00AAAE64 /* GPlaceAPIExample */ = {
 			isa = PBXGroup;
 			children = (
+				7B56745F1B5E6E19003693EC /* PlaceSearch */,
 				7D7AC1D01B5D77EE00AAAE64 /* AppDelegate.h */,
 				7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */,
-				7D7AC1D31B5D77EE00AAAE64 /* ViewController.h */,
-				7D7AC1D41B5D77EE00AAAE64 /* ViewController.m */,
+				7D7AC1D31B5D77EE00AAAE64 /* SelectPlaceService.h */,
+				7D7AC1D41B5D77EE00AAAE64 /* SelectPlaceService.m */,
 				7D7AC1D61B5D77EE00AAAE64 /* Main.storyboard */,
 				7D7AC1D91B5D77EE00AAAE64 /* Images.xcassets */,
 				7D7AC1DB1B5D77EE00AAAE64 /* LaunchScreen.xib */,
@@ -467,10 +488,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D7AC1D51B5D77EE00AAAE64 /* ViewController.m in Sources */,
+				7D7AC1D51B5D77EE00AAAE64 /* SelectPlaceService.m in Sources */,
 				7BA76E431B5E178500CB8B3A /* GPGeometry.m in Sources */,
 				7D7AC1D21B5D77EE00AAAE64 /* AppDelegate.m in Sources */,
 				7BA76E4A1B5E178500CB8B3A /* GPPhoto.m in Sources */,
+				7B56745E1B5E6E13003693EC /* NearbyPlaceSearchController.m in Sources */,
 				7BA76E4C1B5E178500CB8B3A /* GPPlaceDetailsResponse.m in Sources */,
 				7BA76E4D1B5E178500CB8B3A /* GPPlaceSearchRequest.m in Sources */,
 				7BA76E511B5E178500CB8B3A /* GPQueryAutoCompleteResponse.m in Sources */,
@@ -621,6 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GPlaceAPIExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -632,6 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GPlaceAPIExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

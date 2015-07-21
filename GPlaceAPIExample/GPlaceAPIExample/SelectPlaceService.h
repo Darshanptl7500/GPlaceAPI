@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SelectPlaceService : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic,strong) IBOutlet UITableView *tblViewService;
 
 @end
 

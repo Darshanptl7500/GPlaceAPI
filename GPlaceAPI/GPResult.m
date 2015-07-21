@@ -59,7 +59,7 @@
     self.utc_offset = [[attributes valueForKeyPath:@"utc_offset"] integerValue];
     self.website = [attributes valueForKeyPath:@"website"];
     self.reviews = [self reviews:attributes];
-    self.price_level =[self priceLevel:[attributes valueForKeyPath:@"price_level"]];
+    self.price_level =[self priceLevel:[NSString stringWithFormat:@"%@",[attributes valueForKeyPath:@"price_level"]]];
     
     return self;
 }
