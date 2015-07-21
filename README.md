@@ -19,7 +19,7 @@ This includes following:
 ###Cocoapods
 GPlaceAPI is available in cocoapods. you can add it in your project as below
 
-`pod "GPlaceAPI", "~> 1.0"`
+`pod "GPlaceAPI", "~> 1.0.1"`
 
 ### Manual (or using git submodule)
  1. Implement [AFNetworking 2.0][4]
