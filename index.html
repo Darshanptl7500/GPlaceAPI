@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>GPlaceAPI by Darshanptl7500</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">GPlaceAPI</h1>
+      <h2 class="project-tagline">GPlaceAPI is an open-source iOS Objective-C library for fetching Google Places API using simple blocks based API callbacks.</h2>
+      <a href="https://github.com/Darshanptl7500/GPlaceAPI" class="btn">View on GitHub</a>
+      <a href="https://github.com/Darshanptl7500/GPlaceAPI/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Darshanptl7500/GPlaceAPI/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="gplaceapi" class="anchor" href="#gplaceapi" aria-hidden="true"><span class="octicon octicon-link"></span></a>GPlaceAPI</h1>
+
+<p>GPlaceAPI is an open-source iOS Objective-C library for fetching <a href="https://developers.google.com/places/documentation/">Google Places API</a> using simple blocks based API callbacks.</p>
+
+<p>Its Main purpose it to use Google Places API requests with ease in a less lines of code. </p>
+
+<p>This includes following:</p>
+
+<ul>
+<li>
+<a href="https://developers.google.com/places/documentation/search">Place Search</a>
+
+<ul>
+<li>Nearby Search (search places in a specified area)</li>
+<li>Text Search (search places based on a search string)</li>
+</ul>
+</li>
+<li>
+<a href="https://developers.google.com/places/documentation/details">Place Details</a> (get more comprehensive information about a place)</li>
+<li>
+<a href="https://developers.google.com/places/webservice/photos">Place Photos</a> (Get more info about place photos) (Remaining)</li>
+<li>
+<a href="https://developers.google.com/places/webservice/autocomplete">Place Autocomplete</a>  (Get place predictions based on the search text)</li>
+<li>
+<a href="https://developers.google.com/places/webservice/query">Query Autocomplete</a>(Get on-the-fly geographic query predictions)</li>
+</ul>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To Use</h2>
+
+<h3>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cocoapods</h3>
+
+<p>GPlaceAPI is available in cocoapods. you can add it in your project as below</p>
+
+<p><code>pod "GPlaceAPI", "~&gt; 1.0"</code></p>
+
+<h3>
+<a id="manual-or-using-git-submodule" class="anchor" href="#manual-or-using-git-submodule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual (or using git submodule)</h3>
+
+<ol>
+<li>Implement <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking 2.0</a>
+
+<ul>
+<li>GPlaceAPI uses AFNetworking 2.0 so, you need to add AFNetworking in your project </li>
+</ul>
+</li>
+<li>Download source files from this repository</li>
+<li>Add all files from <em>GPlaceAPI</em> folder to your project's target</li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You can take a look at the detailed example usage project <em>GPlaceAPIExample/GPlaceAPIExample.xcodeproj</em>.</p>
+
+<h4>
+<a id="1-import-gplaceapi-files-in-your-implementation-file" class="anchor" href="#1-import-gplaceapi-files-in-your-implementation-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Import GPlaceAPI files in your implementation file</h4>
+
+<p><code>#import "GPHeader.h"</code></p>
+
+<h4>
+<a id="2-setup-google-place-api-key" class="anchor" href="#2-setup-google-place-api-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Setup Google Place API key</h4>
+
+<p>In order to communicate with a Google Places API, you must first generate your own API key. Please take a look at <a href="https://developers.google.com/places/documentation/#Authentication">Introduction - Google Places API</a>.</p>
+
+<p>You must provide API key to a <code>GPlaceAPI</code> before making any request using it.</p>
+
+<p>//Open "GPConstant.h" and set your API_KEY</p>
+
+<p><code>#define kGOOGLE_PLACE_API_KEY @"API_KEY"</code></p>
+
+<h4>
+<a id="3-making-a-request--get-resonse" class="anchor" href="#3-making-a-request--get-resonse" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Making a request &amp; get Resonse</h4>
+
+<pre><code> CLLocationCoordinate2D location = CLLocationCoordinate2DMake(51.501103,-0.124565);
+ GPPlaceSearchRequest *request =[[GPPlaceSearchRequest alloc] initWithLocationCoordinate:location];
+ request.radius = 5000;
+ [request doFetchPlaces:^(GPPlaceSearchResponse *response, NSError *error) {
+        if(!error){
+            if(response.status ==  GPRequestStatusOK) {
+                // Access place results by below model
+                GPResult *result =response.results[0];
+                NSLog(@"%@",result.name);
+            }
+       } 
+    }];
+</code></pre>
+
+<p>Please check <a href="https://developers.google.com/places/documentation/">Google Places API documentation</a> for request and resonse. you can search all request parameters and get response of all objects mentioned in <a href="https://developers.google.com/places/documentation/">Google Places API documentation</a>.</p>
+
+<h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<ul>
+<li>iOS 7.0+</li>
+</ul>
+
+<h2>
+<a id="todos" class="anchor" href="#todos" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODOs</h2>
+
+<ul>
+<li>Add <a href="https://developers.google.com/places/webservice/photos">Place Photos</a> (Get more info about place photos)</li>
+<li>Add Example project on how to use this library.</li>
+<li>Write test cases for this library.</li>
+</ul>
+
+<h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>GPlaceAPI is developed by <a href="http://iosexception.com">Darshan Patel</a>. Please <a href="mailto:developer.ios89@gmail.com">email</a> to let me know you how you are using this library and anything related to this library.</p>
+
+<h2>
+<a id="contributing-and-notes" class="anchor" href="#contributing-and-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing and notes</h2>
+
+<ul>
+<li>If you like this library, please consider giving it a Github star.</li>
+</ul>
+
+<p>Pull requests are very welcome expecting you follow few rules:</p>
+
+<ul>
+<li>Document your changes in a code comments and Git commit message</li>
+<li>Please do make sure your changes don't trouble with any existing code</li>
+</ul>
+
+<h2>
+<a id="version-history" class="anchor" href="#version-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version history</h2>
+
+<h4>
+<a id="10" class="anchor" href="#10" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.0</h4>
+
+<ul>
+<li>First Pre-release</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Darshan Patel</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Darshanptl7500/GPlaceAPI">GPlaceAPI</a> is maintained by <a href="https://github.com/Darshanptl7500">Darshanptl7500</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
