@@ -9,6 +9,7 @@
 #import "TextSearchController.h"
 #import "GPHeader.h"
 #import <UIImageView+AFNetworking.h>
+#import <SVProgressHUD.h>
 
 @interface TextSearchController ()
 @property (nonatomic,strong) NSMutableArray *results;
@@ -31,9 +32,10 @@
 }
 -(void)doCallTextSearchWebservice
 {
-
+    [SVProgressHUD show];
     GPTextSearchRequest *request = [[GPTextSearchRequest alloc] initWithQuery:@"restaurants in Sydney"];
     [request doFetchPlacesByTextSearch:^(GPTextSearchResponse *response, NSError *error) {
+        [SVProgressHUD dismiss];
         if (!error) {
             
             if (response.status == GPRequestStatusOK) {

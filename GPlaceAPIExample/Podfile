@@ -3,6 +3,7 @@ platform :ios, '7.0'
 
 target 'GPlaceAPIExample' do
 pod "AFNetworking", "~> 2.0"
+pod 'SVProgressHUD'
 end
 
 target 'GPlaceAPIExampleTests' do

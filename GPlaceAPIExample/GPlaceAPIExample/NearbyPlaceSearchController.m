@@ -8,6 +8,7 @@
 
 #import "NearbyPlaceSearchController.h"
 #import <UIImageView+AFNetworking.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface NearbyPlaceSearchController ()
 @property (nonatomic,strong) NSMutableArray *results;
@@ -31,6 +32,7 @@
 
 -(void)doCallNearBySearchWebservice
 {
+    [SVProgressHUD show];
     CLLocationCoordinate2D location =CLLocationCoordinate2DMake(37.76999, -122.44696);
     
     GPPlaceSearchRequest *request =[[GPPlaceSearchRequest alloc] initWithLocationCoordinate:location];
@@ -38,6 +40,9 @@
     request.rankby = GPRankByDistance;
     request.types = [NSArray arrayWithObjects:@"hospital",@"bank",@"atm", nil];
     [request doFetchPlaces:^(GPPlaceSearchResponse *response, NSError *error) {
+        
+        [SVProgressHUD dismiss];
+        
         if (!error) {
             
             if (response.status == GPRequestStatusOK) {
