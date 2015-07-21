@@ -10,7 +10,7 @@ This includes following:
      - Nearby Search (search places in a specified area)
      - Text Search (search places based on a search string)
  - [Place Details][3] (get more comprehensive information about a place)
- - [Place Photos][6] (Get more info about place photos)
+ - [Place Photos][6] (Get more info about place photos) (Remaining)
  - [Place Autocomplete][7]  (Get place predictions based on the search text)
  - [Query Autocomplete][8](Get on-the-fly geographic query predictions)
 
@@ -63,6 +63,12 @@ Please check [Google Places API documentation][1] for request and resonse. you c
 
  - iOS 7.0+
 
+##TODOs
+
+- Add [Place Photos][6] (Get more info about place photos)
+- Add Example project on how to use this library.
+- Write test cases for this library.
+
 ##Contact
 
 GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library and anything related to this library.
@@ -79,7 +85,7 @@ Pull requests are very welcome expecting you follow few rules:
 ##Version history
 
 #### 1.0
- - First release
+ - First Pre-release
 
 ##License
 The MIT License (MIT)
