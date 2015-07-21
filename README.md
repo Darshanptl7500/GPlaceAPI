@@ -10,16 +10,16 @@ This includes following:
      - Nearby Search (search places in a specified area)
      - Text Search (search places based on a search string)
  - [Place Details][3] (get more comprehensive information about a place)
- - [Place Photos][9] (Get more info about place photos)
- - [Place Autocomplete][10]  (Get place predictions based on the search text)
- - [Query Autocomplete][11](Get on-the-fly geographic query predictions)
+ - [Place Photos][6] (Get more info about place photos)
+ - [Place Autocomplete][7]  (Get place predictions based on the search text)
+ - [Query Autocomplete][8](Get on-the-fly geographic query predictions)
 
 ##How To Use
 
 
 ### Manual (or using git submodule)
  1. Implement [AFNetworking 2.0][4]
-    - GPlaceAPI uses AFNetworking 2.0 so, you need to add AFNetworking[4] in your project 
+    - GPlaceAPI uses AFNetworking 2.0 so, you need to add AFNetworking in your project 
  2. Download source files from this repository
  3. Add all files from *GPlaceAPI* folder to your project's target
 
@@ -29,15 +29,15 @@ You can take a look at the detailed example usage project *GPlaceAPIExample/GPla
 
 #### 1. Import GPlaceAPI files in your implementation file
 
-`#import "GPConstant.h"`
+`#import "GPHeader.h"`
 
-#### 2. Setup service
+#### 2. Setup Google Place API key
 
-In order to communicate with a Google Places API, you must first generate your own API key. Please take a look at [Introduction - Google Places API][6].
+In order to communicate with a Google Places API, you must first generate your own API key. Please take a look at [Introduction - Google Places API][5].
 
-You must provide API key to a `GPlaceAPI` service before making any request using it. Good place for this code is the App Delegate.
+You must provide API key to a `GPlaceAPI` before making any request using it.
 
-//  Provide API key to GPlaceAPI before making any requests. Open "GPConstant.h" and set your API_KEY
+//Open "GPConstant.h" and set your API_KEY
 
 `#define kGOOGLE_PLACE_API_KEY @"API_KEY"`
 
@@ -56,7 +56,7 @@ You must provide API key to a `GPlaceAPI` service before making any request usin
        } 
     }];
 ```
-Please check [Google Places API documentation][7] for request and resonse. you can search all request parameters and get response of all objects mentioned in [Google Places API documentation][7].
+Please check [Google Places API documentation][1] for request and resonse. you can search all request parameters and get response of all objects mentioned in [Google Places API documentation][1].
 
 
 ##Compatibility
@@ -65,7 +65,7 @@ Please check [Google Places API documentation][7] for request and resonse. you c
 
 ##Contact
 
-GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [drop us an email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library and anything related to this library.
+GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library and anything related to this library.
 
 ##Contributing and notes
 
@@ -109,11 +109,8 @@ THE SOFTWARE.
   [2]: https://developers.google.com/places/documentation/search
   [3]: https://developers.google.com/places/documentation/details
   [4]:https://github.com/AFNetworking/AFNetworking
-  [5]: https://code.google.com/apis/console
-  [6]: https://developers.google.com/places/documentation/#Authentication
-  [7]: https://developers.google.com/places/documentation
-  [8]: https://github.com/FuerteInternational/FTLocationManager
-  [9]:https://developers.google.com/places/webservice/photos
-  [10]:https://developers.google.com/places/webservice/autocomplete
-  [11]:https://developers.google.com/places/webservice/query
+  [5]: https://developers.google.com/places/documentation/#Authentication
+  [6]:https://developers.google.com/places/webservice/photos
+  [7]:https://developers.google.com/places/webservice/autocomplete
+  [8]:https://developers.google.com/places/webservice/query
   
