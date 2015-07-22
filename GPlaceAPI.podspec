@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GPlaceAPI"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "GPlaceAPI is an open-source iOS Objective-C library for fetching Goolge Place API using simple blocks based API callbacks"
 
   s.description  = <<-DESC
@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
 				        - Nearby Search (search places withing a specified area)
 				        - Text Search (search places based on a search string)
 				    - [Place Details] (get more comprehensive information about a place)
-				    - [Place Photos] (Get more info about place photos)
 				    - [Place Autocomplete]  (Get place predictions based on the search text)
 				    - [Query Autocomplete](Get on-the-fly geographic query predictions)
                    DESC
