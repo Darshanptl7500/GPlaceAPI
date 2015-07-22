@@ -10,7 +10,6 @@ This includes following:
      - Nearby Search (search places in a specified area)
      - Text Search (search places based on a search string)
  - [Place Details][3] (get more comprehensive information about a place)
- - [Place Photos][6] (Get more info about place photos) (Remaining)
  - [Place Autocomplete][7]  (Get place predictions based on the search text)
  - [Query Autocomplete][8](Get on-the-fly geographic query predictions)
 
@@ -69,7 +68,6 @@ Please check [Google Places API documentation][1] for request and resonse. you c
 
 ##TODOs
 
-- Add [Place Photos][6] (Get more info about place photos)
 - Add Example project on how to use this library.
 - Write test cases for this library.
 
@@ -88,8 +86,12 @@ Pull requests are very welcome expecting you follow few rules:
 
 ##Version history
 
-#### 1.0
-- First Pre-release
+#### 1.0 Initial Pre-release
+- Added first version.
+
+#### 1.0.1 Pre-release
+- Simplified way of adding API_Key
+- Bug fix for price level enum
 
 ##License
 The MIT License (MIT)
@@ -120,7 +122,6 @@ THE SOFTWARE.
   [3]: https://developers.google.com/places/documentation/details
   [4]:https://github.com/AFNetworking/AFNetworking
   [5]: https://developers.google.com/places/documentation/#Authentication
-  [6]:https://developers.google.com/places/webservice/photos
   [7]:https://developers.google.com/places/webservice/autocomplete
   [8]:https://developers.google.com/places/webservice/query
   
