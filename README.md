@@ -18,7 +18,7 @@ This includes following:
 ###Cocoapods
 GPlaceAPI is available in cocoapods. you can add it in your project as below
 
-`pod "GPlaceAPI", "~> 2.0.1"`
+`pod "GPlaceAPI", "~> 2.0.2"`
 
 ### Manual (or using git submodule)
  1. Implement [AFNetworking 2.0][4]
@@ -96,7 +96,7 @@ Pull requests are very welcome expecting you follow few rules:
 #### 2.0 Public - release
 - Added photo_url in GPPhoto class
  
-#### 2.0.1 Public - release
+#### 2.0.2 Public - release
 - Remove warning of NSInteger conversion
 
 ##License
