@@ -38,7 +38,7 @@ typedef void (^GooglePlaceSearchHandler)(GPPlaceSearchResponse *response, NSErro
 
 @interface GPPlaceSearchRequest : NSObject
 
-@property (nonatomic,assign)CLLocationCoordinate2D location;
+@property (nonatomic,assign) CLLocationCoordinate2D location;
 @property (nonatomic,assign) NSInteger radius;
 @property (nonatomic,assign) GPRankBy rankby;
 @property (nonatomic,strong) NSString *keyword;
