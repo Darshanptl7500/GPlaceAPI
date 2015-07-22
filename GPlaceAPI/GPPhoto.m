@@ -29,6 +29,7 @@
 
 #import "GPPhoto.h"
 
+
 @implementation GPPhoto
 - (instancetype)initWithAttributes:(NSDictionary *)attributes
 {
@@ -37,11 +38,19 @@
         return nil;
     }
     
-    self.height =[[attributes valueForKeyPath:@"height"] doubleValue];
-    self.width =[[attributes valueForKeyPath:@"width"] doubleValue];
+    self.height =[[attributes valueForKeyPath:@"height"] integerValue];
+    self.width =[[attributes valueForKeyPath:@"width"] integerValue];
     self.html_attributions =[attributes valueForKeyPath:@"html_attributions"];
-    self.photo_reference =[attributes valueForKeyPath:@"photo_reference"] ;
-
+    self.photo_reference =[attributes valueForKeyPath:@"photo_reference"];
+    
+    self.photo_url =[NSString stringWithFormat:@"%@photo?maxwidth=%d&maxheight=%d&photoreference=%@&key=%@",kAPI_PLACES_URL,[[attributes valueForKeyPath:@"width"] integerValue],[[attributes valueForKeyPath:@"height"] integerValue],[attributes valueForKeyPath:@"photo_reference"],[GPlaceAPISetup sharedInstance].Api_Key];
+    
     return self;
+}
+-(NSString *)getPhotoUrl:(int)maxWidth withHeight:(int)maxHeight
+{
+     NSString *url =[NSString stringWithFormat:@"%@photo?maxwidth=%d&maxheight=%d&photoreference=%@&key=%@",kAPI_PLACES_URL,maxWidth,maxHeight,self.photo_reference,[GPlaceAPISetup sharedInstance].Api_Key];
+    
+    return url;
 }
 @end

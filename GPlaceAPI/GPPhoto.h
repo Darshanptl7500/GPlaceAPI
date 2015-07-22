@@ -28,14 +28,15 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-
+#import "GPHeader.h"
 @interface GPPhoto : NSObject
 
-@property (nonatomic,assign) double height;
+@property (nonatomic,assign) int height;
 @property (nonatomic,strong) NSArray *html_attributions;
 @property (nonatomic,strong) NSString *photo_reference;
-@property (nonatomic,assign) double width;
+@property (nonatomic,assign) int width;
+@property (nonatomic,strong) NSString *photo_url;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
-
+-(NSString *)getPhotoUrl:(int)maxWidth withHeight:(int)maxHeight;
 @end
