@@ -67,6 +67,8 @@
 #import "GPMatchedSubstring.h"
 #import "GPPredictions.h"
 #import "GPTerms.h"
+
 #import "GPlaceAPISetup.h"
+
 
 #endif
