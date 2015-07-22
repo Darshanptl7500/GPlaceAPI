@@ -47,7 +47,7 @@
     
     return self;
 }
--(NSString *)getPhotoUrl:(int)maxWidth withHeight:(int)maxHeight
+-(NSString *)getPhotoUrl:(NSInteger)maxWidth withHeight:(NSInteger)maxHeight
 {
      NSString *url =[NSString stringWithFormat:@"%@photo?maxwidth=%d&maxheight=%d&photoreference=%@&key=%@",kAPI_PLACES_URL,maxWidth,maxHeight,self.photo_reference,[GPlaceAPISetup sharedInstance].Api_Key];
     

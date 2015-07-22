@@ -31,12 +31,12 @@
 #import "GPHeader.h"
 @interface GPPhoto : NSObject
 
-@property (nonatomic,assign) int height;
+@property (nonatomic,assign) NSInteger height;
 @property (nonatomic,strong) NSArray *html_attributions;
 @property (nonatomic,strong) NSString *photo_reference;
-@property (nonatomic,assign) int width;
+@property (nonatomic,assign) NSInteger width;
 @property (nonatomic,strong) NSString *photo_url;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
--(NSString *)getPhotoUrl:(int)maxWidth withHeight:(int)maxHeight;
+-(NSString *)getPhotoUrl:(NSInteger)maxWidth withHeight:(NSInteger)maxHeight;
 @end
