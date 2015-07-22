@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GPlaceAPI"
-  s.version      = "1.0.2"
+  s.version      = "2.0"
   s.summary      = "GPlaceAPI is an open-source iOS Objective-C library for fetching Goolge Place API using simple blocks based API callbacks"
 
   s.description  = <<-DESC
