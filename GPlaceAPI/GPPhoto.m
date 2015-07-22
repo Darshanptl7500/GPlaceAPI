@@ -43,13 +43,13 @@
     self.html_attributions =[attributes valueForKeyPath:@"html_attributions"];
     self.photo_reference =[attributes valueForKeyPath:@"photo_reference"];
     
-    self.photo_url =[NSString stringWithFormat:@"%@photo?maxwidth=%d&maxheight=%d&photoreference=%@&key=%@",kAPI_PLACES_URL,[[attributes valueForKeyPath:@"width"] integerValue],[[attributes valueForKeyPath:@"height"] integerValue],[attributes valueForKeyPath:@"photo_reference"],[GPlaceAPISetup sharedInstance].Api_Key];
+    self.photo_url =[NSString stringWithFormat:@"%@photo?maxwidth=%ld&maxheight=%ld&photoreference=%@&key=%@",kAPI_PLACES_URL,(long)[[attributes valueForKeyPath:@"width"] integerValue],(long)[[attributes valueForKeyPath:@"height"] integerValue],[attributes valueForKeyPath:@"photo_reference"],[GPlaceAPISetup sharedInstance].Api_Key];
     
     return self;
 }
 -(NSString *)getPhotoUrl:(NSInteger)maxWidth withHeight:(NSInteger)maxHeight
 {
-     NSString *url =[NSString stringWithFormat:@"%@photo?maxwidth=%d&maxheight=%d&photoreference=%@&key=%@",kAPI_PLACES_URL,maxWidth,maxHeight,self.photo_reference,[GPlaceAPISetup sharedInstance].Api_Key];
+     NSString *url =[NSString stringWithFormat:@"%@photo?maxwidth=%ld&maxheight=%ld&photoreference=%@&key=%@",kAPI_PLACES_URL,(long)maxWidth,(long)maxHeight,self.photo_reference,[GPlaceAPISetup sharedInstance].Api_Key];
     
     return url;
 }
