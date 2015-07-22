@@ -74,8 +74,19 @@
     
     GPResult *result = self.results[indexPath.row];
     
+    NSArray *photos = result.photos;
+    
+    if (photos.count!=0) {
+       
+        GPPhoto *photo = photos[0];
+        [cell.imageView setImageWithURL:[NSURL URLWithString:[photo getPhotoUrl:100 withHeight:100]]];
+    }
+    else
+    {
+        [cell.imageView setImageWithURL:[NSURL URLWithString:result.icon]];
+    }
     cell.textLabel.text = result.name;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:result.icon]];
+  
     return cell;
 }
 /*
