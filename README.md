@@ -93,7 +93,7 @@ Pull requests are very welcome expecting you follow few rules:
 - Simplified way of adding API_Key
 - Bug fix for price level enum
 
-#### 2.0 Pre-release
+#### 2.0 Public - release
 - Added photo_url in GPPhoto class
 
 
