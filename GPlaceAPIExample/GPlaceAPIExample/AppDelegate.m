@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[GPlaceAPISetup sharedInstance] setApi_Key:@"AIzaSyB_1GkHCrJsiErWwmF8AVcp4VGQaDxrOh4"];
+    [[GPlaceAPISetup sharedInstance] setApi_Key:@"SET_API_KEY"];
     // Override point for customization after application launch.
     return YES;
 }
