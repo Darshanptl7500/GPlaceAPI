@@ -10,6 +10,7 @@
 #import "GPHeader.h"
 #import <UIImageView+AFNetworking.h>
 #import <SVProgressHUD.h>
+#import "GPTableCell.h"
 
 @interface TextSearchController ()
 @property (nonatomic,strong) NSMutableArray *results;
@@ -65,12 +66,9 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    GPTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
-    }
+   
     
     GPResult *result = self.results[indexPath.row];
     
@@ -79,15 +77,46 @@
     if (photos.count!=0) {
        
         GPPhoto *photo = photos[0];
-        [cell.imageView setImageWithURL:[NSURL URLWithString:[photo getPhotoUrl:100 withHeight:100]]];
+        
+       [cell.parallaxImage setImageWithURL:[NSURL URLWithString:[photo getPhotoUrl:cell.parallaxImage.frame.size.width*2 withHeight:cell.parallaxImage.frame.size.height*2]] placeholderImage:nil];
+      
     }
     else
     {
-        [cell.imageView setImageWithURL:[NSURL URLWithString:result.icon]];
+          [cell.parallaxImage setImageWithURL:[NSURL URLWithString:result.icon] placeholderImage:nil];
+    
     }
-    cell.textLabel.text = result.name;
-  
+    
+    cell.titleLabel.text = result.name;
+    
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // Get visible cells on table view.
+    NSArray *visibleCells = [self.tblTextSearch visibleCells];
+    
+    for (GPTableCell *cell in visibleCells) {
+        [self GPTableCell:self.tblTextSearch didScrollOnView:self.view withCell:cell];
+    }
+}
+
+- (void)GPTableCell:(UITableView *)tableView didScrollOnView:(UIView *)view withCell:(GPTableCell*)cell
+{
+    CGRect rectInSuperview = [tableView convertRect:cell.frame toView:view];
+    
+    float distanceFromCenter = CGRectGetHeight(view.frame)/2 - CGRectGetMinY(rectInSuperview);
+    float difference = CGRectGetHeight(cell.parallaxImage.frame) - CGRectGetHeight(cell.frame);
+    float move = (distanceFromCenter / CGRectGetHeight(view.frame)) * difference;
+    
+    CGRect imageRect = cell.parallaxImage.frame;
+    imageRect.origin.y = -(difference/2)+move;
+    cell.parallaxImage.frame = imageRect;
+    
 }
 /*
 #pragma mark - Navigation

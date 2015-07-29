@@ -32,79 +32,50 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        
-        return 2;
-        
-    }else if(section ==1)
-    {
-        return 3;
-    }
-    
-    return 0;
+    return 2;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-   
+    
     if (cell == nil) {
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
-
-    if (indexPath.section == 0) {
-       
-        if (indexPath.row == 0) {
-            
-            cell.textLabel.text = @"Nearby Search";
-            
-        }else if (indexPath.row == 1) {
-            
-            cell.textLabel.text = @"Text Search";
-            
-        }
+    
+    
+    if (indexPath.row == 0) {
         
-    }else if(indexPath.section == 1)
-    {
-       if(indexPath.row == 0)
-        {
-            cell.textLabel.text = @"Place Details";
-            
-        }else if(indexPath.row == 1)
-        {
-            cell.textLabel.text = @"Place Autocomplete";
-            
-        }else if(indexPath.row == 2)
-        {
-            cell.textLabel.text = @"Place Autocomplete";
-        }
- 
+        cell.textLabel.text = @"Nearby Search";
+        
+    }else if (indexPath.row == 1) {
+        
+        cell.textLabel.text = @"Text Search";
+        
     }
     
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
+    
+    if (indexPath.row == 0) {
+        NearbyPlaceSearchController *objNearBy =[self.storyboard instantiateViewControllerWithIdentifier:@"NearbyPlaceSearchController"];
+        [self.navigationController pushViewController:objNearBy animated:YES];
+    }else if(indexPath.row == 1)
+    {
+        TextSearchController *objTextBy =[self.storyboard instantiateViewControllerWithIdentifier:@"TextSearchController"];
+        [self.navigationController pushViewController:objTextBy animated:YES];
         
-        if (indexPath.row == 0) {
-            NearbyPlaceSearchController *objNearBy =[self.storyboard instantiateViewControllerWithIdentifier:@"NearbyPlaceSearchController"];
-            [self.navigationController pushViewController:objNearBy animated:YES];
-        }else if(indexPath.row == 1)
-        {
-            TextSearchController *objTextBy =[self.storyboard instantiateViewControllerWithIdentifier:@"TextSearchController"];
-            [self.navigationController pushViewController:objTextBy animated:YES];
-            
-        }
     }
- 
+    
 }
 @end

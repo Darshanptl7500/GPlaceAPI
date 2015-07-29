@@ -33,6 +33,7 @@
 		7BA76E551B5E178500CB8B3A /* GPTerms.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3B1B5E178500CB8B3A /* GPTerms.m */; };
 		7BA76E561B5E178500CB8B3A /* GPTextSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3D1B5E178500CB8B3A /* GPTextSearchRequest.m */; };
 		7BA76E571B5E178500CB8B3A /* GPTextSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76E3F1B5E178500CB8B3A /* GPTextSearchResponse.m */; };
+		7BD25D561B68AFD300BA6BA0 /* GPTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD25D551B68AFD300BA6BA0 /* GPTableCell.m */; };
 		7D53B7EB1B5EC16000A6BE09 /* GPlaceAPISetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D53B7EA1B5EC16000A6BE09 /* GPlaceAPISetup.m */; };
 		7D7AC1CF1B5D77EE00AAAE64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1CE1B5D77EE00AAAE64 /* main.m */; };
 		7D7AC1D21B5D77EE00AAAE64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */; };
@@ -111,6 +112,8 @@
 		7BA76E3D1B5E178500CB8B3A /* GPTextSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTextSearchRequest.m; sourceTree = "<group>"; };
 		7BA76E3E1B5E178500CB8B3A /* GPTextSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTextSearchResponse.h; sourceTree = "<group>"; };
 		7BA76E3F1B5E178500CB8B3A /* GPTextSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTextSearchResponse.m; sourceTree = "<group>"; };
+		7BD25D541B68AFD300BA6BA0 /* GPTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTableCell.h; sourceTree = "<group>"; };
+		7BD25D551B68AFD300BA6BA0 /* GPTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTableCell.m; sourceTree = "<group>"; };
 		7D53B7E91B5EC16000A6BE09 /* GPlaceAPISetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPlaceAPISetup.h; sourceTree = "<group>"; };
 		7D53B7EA1B5EC16000A6BE09 /* GPlaceAPISetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPlaceAPISetup.m; sourceTree = "<group>"; };
 		7D7AC1C91B5D77EE00AAAE64 /* GPlaceAPIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPlaceAPIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +294,15 @@
 			name = APIModels;
 			sourceTree = "<group>";
 		};
+		7BD25D531B68AFA800BA6BA0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BD25D541B68AFD300BA6BA0 /* GPTableCell.h */,
+				7BD25D551B68AFD300BA6BA0 /* GPTableCell.m */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		7D7AC1C01B5D77EE00AAAE64 = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +327,7 @@
 		7D7AC1CB1B5D77EE00AAAE64 /* GPlaceAPIExample */ = {
 			isa = PBXGroup;
 			children = (
+				7BD25D531B68AFA800BA6BA0 /* TableCell */,
 				7B56745F1B5E6E19003693EC /* PlaceSearch */,
 				7D7AC1D01B5D77EE00AAAE64 /* AppDelegate.h */,
 				7D7AC1D11B5D77EE00AAAE64 /* AppDelegate.m */,
@@ -534,6 +547,7 @@
 				7BA76E541B5E178500CB8B3A /* GPReviewsAspects.m in Sources */,
 				7BA76E411B5E178500CB8B3A /* GPAutoCompleteRequest.m in Sources */,
 				7BA76E401B5E178500CB8B3A /* GPAddressComponents.m in Sources */,
+				7BD25D561B68AFD300BA6BA0 /* GPTableCell.m in Sources */,
 				7BA76E521B5E178500CB8B3A /* GPResult.m in Sources */,
 				7BA76E551B5E178500CB8B3A /* GPTerms.m in Sources */,
 			);
