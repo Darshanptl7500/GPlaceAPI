@@ -13,6 +13,9 @@ This includes following:
  - [Place Autocomplete][7]  (Get place predictions based on the search text)
  - [Query Autocomplete][8](Get on-the-fly geographic query predictions)
 
+##Screens
+![NearBy search](https://raw.githubusercontent.com/Darshanptl7500/GPlaceAPI/master/ScreenShots/NearbySearch.png)![TextBy search](https://raw.githubusercontent.com/Darshanptl7500/GPlaceAPI/master/ScreenShots/TextSearch.png)
+
 ##How To Use
 
 ###Cocoapods
