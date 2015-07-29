@@ -64,7 +64,9 @@ You must provide API key to a `GPlaceAPI` before making any request using it.
 ```
 Please check [Google Places API documentation][1] for request and resonse. you can search all request parameters and get response of all objects mentioned in [Google Places API documentation][1].
 
-
+##Wiki
+ You can check more about library in [wiki](https://github.com/Darshanptl7500/GPlaceAPI/wiki)
+ 
 ##Compatibility
 
  - iOS 7.0+
