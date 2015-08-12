@@ -76,6 +76,10 @@ Please check [Google Places API documentation][1] for request and resonse. you c
 - Add Example project on how to use this library.
 - Write test cases for this library.
 
+##Android
+
+- Check [GooglePlaceLib](https://github.com/pchauhan/GooglePlaceLib) for android
+
 ##Contact
 
 GPlaceAPI is developed by [Darshan Patel](http://iosexception.com). Please [email](mailto:developer.ios89@gmail.com) to let me know you how you are using this library and anything related to this library.
