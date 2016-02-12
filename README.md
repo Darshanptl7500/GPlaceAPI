@@ -18,7 +18,7 @@ This includes following:
 
 ##How To Use
 
-###Cocoapods
+###CocoaPods
 GPlaceAPI is available in cocoapods. you can add it in your project as below
 
 `pod "GPlaceAPI", "~> 2.0.2"`
